@@ -1,0 +1,27 @@
+export const DataTypes = {
+	USERNAME: "username",
+	FULLNAME: "fullname",
+	EMAIL: "email",
+	PHONE_NUMBER: "phonenumber",
+	CREATED: "created",
+	PASSWORD: "password",
+	FRIENDS: "friends",
+	LOCATION: "location",
+	UPDATED: "updated"
+}
+
+export const ActionTypes = {
+	CREATE_USER: "CREATE_USER",
+	SIGNIN_USER: "SIGNIN_USER",
+	GET_USERS: "GET_USERS",
+	GET_USER: "GET_USER",
+	UPDATE_USER:"UPDATE_USER",
+	DELETE_USER: "DELETE_USER",
+	GET_FRIENDS: "GET_FRIENDS",
+	GET_FRIEND: "GET_FRIEND",
+	UPDATE_FRIEND:"UPDATE_FRIEND",
+	DELETE_FRIEND: "DELETE_FRIEND",
+	LOCATE_FRIEND: "LOCATE_FRIEND",
+	SAVE_FRIEND: "SAVE_FRIEND"
+
+}
