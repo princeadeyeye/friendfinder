@@ -21,8 +21,8 @@ class Login extends Component {
 					<Register />
 				</div>
 				<form className="login_form">
-					<h4>Welcome to Phone Finder</h4>
-					<p>Welcome Back! Login to access your account</p>
+					<h4>Welcome to Friend Finder</h4>
+					<p>Login to access your account</p>
 					<div class="floating-label">
 						<label for="email">Email:</label>
 						<input 

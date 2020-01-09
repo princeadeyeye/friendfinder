@@ -1,37 +1,67 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom'
 
 class Navigation extends Component {
+
+	state = {
+		isSignedin: false
+	}
  
    
     render() {
-        return (
-        <div>
-        	<header>
-				<div class='right-header'>
-					<img src="img/phone.png" alt="phone" />
-					<p>Phone Finder</p>
-				</div>
-				<div class="left-header">
-					<span>
-						<i class="fas fa-envelope-open-text"></i>
-					</span>
-					<span>
-						<i class="fas fa-user-alt"></i>
-					</span>
+    	if(!this.state.isSignedin) {
+    		return (
+		        <div>
+		        	<header>
+						<div class='right-header'>
+							<img src="img/phone.png" alt="phone" />
+							<p>Friend Finder</p>
+						</div>
+						<div class="left-header">
+							
+						</div>
+					   </header>
+						<nav>
+							<ul>
+								<li><NavLink to="/home">Home</NavLink></li>
+								<li><NavLink to="/contact">Contact</NavLink></li>
+								<li><NavLink to="/about">About</NavLink></li>
 
-				</div>
-			   </header>
-				<nav>
-					<ul>
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Friends</a></li>
-						<li><a href="#">Contact</a></li>
-						<li><a href="#">About</a></li>
+							</ul>
+						</nav>
+		      		</div>
+        		);
+    	} else {
+    		return (
+		        <div>
+		        	<header>
+						<div class='right-header'>
+							<img src="img/phone.png" alt="phone" />
+							<p>Friend Finder</p>
+						</div>
+						<div class="left-header">
+							<span>
+								<i class="fas fa-envelope-open-text"></i>
+							</span>
+							<span>
+								<i class="fas fa-user-alt"></i>
+							</span>
 
-					</ul>
-				</nav>
-      		</div>
+						</div>
+					   </header>
+						<nav>
+							<ul>
+								<li><NavLink to="/home">Home</NavLink></li>
+								<li><NavLink to="/friends">Friends</NavLink></li>
+								<li><NavLink to="/contact">Contact</NavLink></li>
+								<li><NavLink to="/about">About</NavLink></li>
+
+							</ul>
+						</nav>
+		      		</div>
         );
+    	}
+        
     }
 }
 
