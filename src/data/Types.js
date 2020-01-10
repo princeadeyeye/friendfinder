@@ -1,13 +1,6 @@
 export const DataTypes = {
-	USERNAME: "username",
-	FULLNAME: "fullname",
-	EMAIL: "email",
-	PHONE_NUMBER: "phonenumber",
-	CREATED: "created",
-	PASSWORD: "password",
-	FRIENDS: "friends",
-	LOCATION: "location",
-	UPDATED: "updated"
+	USERS: "users"
+	FRIENDS: "friends"
 }
 
 export const ActionTypes = {

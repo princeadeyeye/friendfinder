@@ -14,6 +14,7 @@ const UserSchema = new mongoose.Schema({
 	email: {
 		type: String,
 		trim: true,
+		unique: 'Email already exist', 
 		require: 'Email is required'
 	},
 	phonenumber: {
@@ -71,3 +72,5 @@ UserSchema.methods = {
 	return Math.round((new Date().valueOf() * Math.random())) + ''
 	}
 }
+
+module.exports = mongoose.model('User', UserSchema)

@@ -6,22 +6,30 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.19.1",
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
     "cookie-parser": "^1.4.4",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "express-jwt": "^5.3.1",
     "helmet": "^3.21.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.8.6",
+    "nodemon": "^2.0.2",
+    "npm-run-all": "^4.1.5",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npm-run-all --parallel react nodemon",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "react": "react-scripts start",
+    "nodemon": "nodemon ./server/server"
   },
   "eslintConfig": {
     "extends": "react-app"

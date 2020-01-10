@@ -5,11 +5,13 @@ const compress = require('compression')
 const helmet = require('helmet')
 const cors = require('cors')
 const config = require('../config/config')
+const mongoose = require('mongoose')
 
 
 // USER ROUTES
 const userRoute = require('./routes/user-route')
 const authRoute = require('./routes/auth-route')
+const friendRoute = require('./routes/friend-route')
 
 // express
 const app = express();
@@ -44,7 +46,11 @@ app.use((req, res, next) => {
 // ROUTES
 app.use('/', userRoute)
 app.use('/', authRoute)
+app.use('/', friendRoute)
 
+app.use('/', (req, res) => {
+	res.status(200).send('testing')
+})
 
 
 

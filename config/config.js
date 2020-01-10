@@ -4,8 +4,8 @@ const config = {
 	jwtSecret: process.env.JWT_SECRET || "YOUR_secret_key",
 	mongoUri: process.env.MONGODB_URI ||
 	process.env.MONGO_HOST ||
-	'mongodb+srv://recipe:51Ok96m81a0oKSSi@cluster0-qscnl.mongodb.net/test?retryWrites=true&w=majority'
+	'mongodb+srv://new-user_1:adeyeye@cluster0-qscnl.mongodb.net/test?retryWrites=true&w=majority'
 }
 
 
-export default config
+module.exports = config
