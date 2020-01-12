@@ -3,22 +3,24 @@ const friendCtrl = require('../controllers/friend-controller')
 
 const router = express.Router();
 
-/*// get all users
-router.get('/api/v1/friends', friendCtrl.listUsers)
+ // get all users
+router.get('/api/v1/friends', friendCtrl.listFriends)
 
 // get a single user
-router.get('/api/v1/friends/:userId', friendCtrl.getUser)
+router.get('/api/v1/friends/:friendId', friendCtrl.getFriend)
 
 // update a user
-router.patch('/api/v1/friends/userId', friendCtrl.updateUser)
+router.patch('/api/v1/friends/friendId', friendCtrl.updateFriend)
 
 // delete a user
-router.patch('/api/v1/friends/:userid', friendCtrl.removeUser)
+router.patch('/api/v1/friends/:friendId', friendCtrl.removeFriend)
 
 //show friend location
-router.get('/api/v1/friends/:userId/location', friendCtrl.getlocation)
+router.get('/api/v1/friends/:friendId/location', friendCtrl.saveLocation)
 
 // save a friend 
-router.post('/api/v1/friends', friendCtrl.savefriend)*/
+router.post('/api/v1/friends', friendCtrl.saveFriend)
+
+router.param('friendId', friendCtrl.friendById)
 
 module.exports = router
