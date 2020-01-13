@@ -1,4 +1,5 @@
 const Friend = require('../model/friend-model')
+const _ = require('lodash')
 
 
 const listFriends = (req, res) => {

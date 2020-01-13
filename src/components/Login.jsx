@@ -12,7 +12,11 @@ class Login extends Component {
 		this.setState({ [name] : event.target.value})
 	}
   handleSubmit = () => {
-  	
+  	const user = {
+  		email: this.state.email,
+  		password: this.state.password
+  	}
+  	this.props.login(user)
   }
     render() {
         return (

@@ -1,5 +1,5 @@
 const User = require('../model/user-model')
-
+const _ = require('lodash')
 
 
 const listUsers = (req, res) => {
@@ -38,7 +38,14 @@ const getUser = (req, res) => {
 
 const updateUser = (req, res) => {
 	let user = req.profile
-	user = _.extended(user, req.body)
+	const updatedUser =  {
+		username: req.body.username,
+		fullname: req.body.fullname,
+		email: req.body.email,
+		password: req.body.password,
+		phonenumber: req.body.phonenumber
+	}
+	user = _.extend(user, updatedUser)
 	user.updated = Date.now()
 	user.save((err) => {
 		if(err) {

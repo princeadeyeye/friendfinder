@@ -15,6 +15,17 @@ class Register extends Component {
    	this.setState({ [name] : event.target.value })
    }
 
+   handleSubmit = () => {
+   	const data = {
+   		username: this.state.username,
+   		fullname: this.state.fullname,
+   		phonenumber: this.state.phonenumber,
+   		email: this.state.email,
+   		password: this.state.password
+   	}
+   	this.props.submit(data)
+   }
+
     render() {
         return (
         	<div className= 'Register-form'>

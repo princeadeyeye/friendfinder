@@ -10,10 +10,10 @@ router.get('/api/v1/friends', friendCtrl.listFriends)
 router.get('/api/v1/friends/:friendId', friendCtrl.getFriend)
 
 // update a user
-router.patch('/api/v1/friends/friendId', friendCtrl.updateFriend)
+router.patch('/api/v1/friends/:friendId', friendCtrl.updateFriend)
 
 // delete a user
-router.patch('/api/v1/friends/:friendId', friendCtrl.removeFriend)
+router.delete('/api/v1/friends/:friendId', friendCtrl.removeFriend)
 
 //show friend location
 router.get('/api/v1/friends/:friendId/location', friendCtrl.saveLocation)

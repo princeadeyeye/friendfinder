@@ -11,10 +11,10 @@ router.param('userId', userCtrl.userById)
 
 
 // get a single user
-router.get('/api/v1/users/userId', userCtrl.getUser)
+router.get('/api/v1/users/:userId', userCtrl.getUser)
 
 // update a user
-router.patch('/api/v1/users/userId', userCtrl.updateUser)
+router.patch('/api/v1/users/:userId', userCtrl.updateUser)
 
 // delete a user
 router.patch('/api/v1/users/:userid',userCtrl.removeUser)
